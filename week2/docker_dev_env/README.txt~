@@ -1,0 +1,34 @@
+# Task for Week 2
+
+The intend of this task is to run a PHP Script on PHP CLI using a Docker Container.
+
+### Pre-requirements:
+  - Ubuntu System
+  - Git
+  - Docker Installation
+  
+### Building Ubuntu Container
+
+Clone the repository from GitHub that contains the Dockerfile
+
+```sh
+$ git clone https://github.com/lehernandez/internship.git
+$ cd internship/week2
+$ docker build -t ubuntu/PHP_CLI .
+```
+
+These commands will create a Ubuntu docker container with PHP cli installed. 
+Because of the -t parameter you can identify the docker image as: ubuntu/PHP_CLI
+
+### Copying PHP CLI Script file to the Ubuntu Docker Container
+
+```sh
+$ docker cp foo.txt ubuntu/PHP_CLI:/foo.txt
+```
+
+### Running the PHP CLI Script
+
+```sh
+$ docker run
+```
+
