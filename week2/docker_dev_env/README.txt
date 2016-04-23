@@ -13,21 +13,15 @@ Clone the repository from GitHub that contains the Dockerfile
 
 ```sh
 $ git clone https://github.com/lehernandez/internship.git
-$ cd internship/week2
-$ docker build -t ubuntu/PHP_CLI .
+$ cd internship/week2/docker_dev_env
+$ docker build -t ubuntu/php .
 ```
 
 These commands will create a Ubuntu docker container with PHP cli installed. 
-Because of the -t parameter you can identify the docker image as: ubuntu/PHP_CLI
+Because of the -t parameter you can identify the docker image as: ubuntu/php
 
-### Copying PHP CLI Script file to the Ubuntu Docker Container
+Also the hello.php script will be copied to the root folder of the container
 
-The first command is to get the container id that will be used in the second command to copy the script to the container
-
-```sh
-$ docker ps -l
-$ at hello.php | sudo docker exec -i CONTAINER ID sh -c 'cat > /hello.php'
-```
 
 ### Running the PHP CLI Script
 
